@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="206.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.LoginUI">
+   <children>
+      <TextField fx:id="TLogin" layoutX="48.0" layoutY="62.0" prefHeight="25.0" prefWidth="545.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="14.0" />
+      <PasswordField fx:id="TPasswd" layoutX="48.0" layoutY="102.0" prefHeight="25.0" prefWidth="538.0" AnchorPane.leftAnchor="48.0" AnchorPane.rightAnchor="14.0" />
+      <ImageView fx:id="Iloginviwe" fitHeight="25.0" fitWidth="40.0" layoutX="14.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="546.0">
+         <image>
+            <Image url="@../images/login.png" />
+         </image></ImageView>
+      <ImageView fx:id="IpasswdView" fitHeight="25.0" fitWidth="40.0" layoutX="14.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="553.0">
+         <image>
+            <Image url="@../images/lock.png" />
+         </image></ImageView>
+      <Button fx:id="BSignin" layoutX="526.0" layoutY="179.0" mnemonicParsing="false" onAction="#signIn" prefHeight="25.0" prefWidth="60.0" text="Sign In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="526.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="179.0" />
+      <Button fx:id="BLogin" layoutX="454.0" layoutY="179.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="60.0" text="Log In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="179.0" />
+   </children>
+</AnchorPane>
