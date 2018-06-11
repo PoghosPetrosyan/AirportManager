@@ -19,7 +19,7 @@
          <image>
             <Image url="@../images/lock.png" />
          </image></ImageView>
-      <Button fx:id="BSignin" layoutX="526.0" layoutY="179.0" mnemonicParsing="false" onAction="#signIn" prefHeight="25.0" prefWidth="60.0" text="Sign In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="526.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="179.0" />
-      <Button fx:id="BLogin" layoutX="454.0" layoutY="179.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="60.0" text="Log In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="454.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="179.0" />
+      <Button fx:id="BSignin" layoutX="526.0" layoutY="179.0" mnemonicParsing="false" onAction="#signIn" prefHeight="25.0" prefWidth="60.0" text="Sign In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="522.0" AnchorPane.rightAnchor="14.0" AnchorPane.topAnchor="179.0" />
+      <Button fx:id="BLogin" layoutX="454.0" layoutY="179.0" mnemonicParsing="false" onAction="#logIn" prefHeight="25.0" prefWidth="60.0" text="Log In" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="450.0" AnchorPane.rightAnchor="86.0" AnchorPane.topAnchor="179.0" />
    </children>
 </AnchorPane>

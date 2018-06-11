@@ -9,8 +9,8 @@ public class DB_Connector {
     private static final String DB_URL = "jdbc:mysql://sql3.freemysqlhosting.net:3306/sql3241153";
 
     // Database credentials
-    private static final String USER = "root";
-    private static final String PASS = "root";
+    private static final String USER = "sql3241153";
+    private static final String PASS = "yBYHGD4xff";
 
     private static volatile Connection connection;
 

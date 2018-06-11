@@ -117,7 +117,7 @@ public class EmployeeDao {
                 employee.setLogin(rs.getString("login"));
                 employee.setPassword(rs.getString("password"));
                 employee.setEmail(rs.getString("email"));
-                employee.setBirthday(rs.getDate("birthday").toString());
+                employee.setBirthday(rs.getDate("birthday"));
                 users.add(employee);
             }
             rs.close();
