@@ -2,6 +2,7 @@ package ui;
 
 import db.EmployeeDao;
 import entity.Employee;
+import entity.MD5;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -44,6 +45,10 @@ public class SigninUI {
     javafx.scene.control.Label LVPasswd;
     @FXML
     javafx.scene.control.Label Lmessage;
+    @FXML
+    javafx.scene.control.RadioButton RAdmin;
+    @FXML
+    javafx.scene.control.RadioButton RUser;
 
     private boolean flag;
 
@@ -71,11 +76,7 @@ public class SigninUI {
             Lmessage.setText("Full Name Not Valid");
         }
         if (isBirthDayValid(TBirthDate.getText())) {
-            try {
-                employee.setBirthday(new SimpleDateFormat("yyyy-mm-dd").parse(TBirthDate.getText()));
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
+            employee.setBirthday(TBirthDate.getText());
             flag = true;
         } else {
             LBirthdate.setTextFill(Color.RED);
@@ -106,7 +107,7 @@ public class SigninUI {
         }
         if (PPasswd.getText().equals(PVPasswd.getText())) {
             if (isPasswordValid(PPasswd.getText())) {
-                employee.setPassword(PPasswd.getText());
+                employee.setPassword(MD5.make(PPasswd.getText()));
                 flag = true;
             } else {
                 LPasswd.setTextFill(Color.RED);
@@ -120,11 +121,23 @@ public class SigninUI {
             Lmessage.setVisible(true);
             Lmessage.setTextFill(Color.RED);
             Lmessage.setText("Passwords dose not much!");
-            flag=false;
+            flag = false;
         }
 
-        if(flag){
+        if (RAdmin.isSelected()) {
+            employee.setStatus("A");
+            RUser.setSelected(false);
+        }
+
+        if (RUser.isSelected()) {
+            employee.setStatus("U");
+            RAdmin.setSelected(false);
+        }
+
+
+        if (flag) {
             ed.addUser(employee);
+            cancel(actionEvent);
         }
     }
 

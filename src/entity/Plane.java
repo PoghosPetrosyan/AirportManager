@@ -7,12 +7,12 @@ import java.util.Date;
  */
 public class Plane {
     private String name;
-    private Date releaseDate;
+    private String releaseDate;
     private int hoursInAir;
     private int id;
 
     public Plane() {}
-    public Plane(String name, Date releaseDate, int hoursInAir) {
+    public Plane(String name, String releaseDate, int hoursInAir) {
         this.name = name;
         this.releaseDate = releaseDate;
         this.hoursInAir = hoursInAir;
@@ -34,11 +34,11 @@ public class Plane {
         this.name = name;
     }
 
-    public Date getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(Date releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

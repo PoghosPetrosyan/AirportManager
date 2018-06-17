@@ -1,11 +1,5 @@
 package entity;
 
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -14,7 +8,7 @@ import java.util.Date;
 
 public class Employee {
     private String fullName;
-    private Date birthday;
+    private String birthday;
     private int id;
     private String login;
     private String password;
@@ -23,7 +17,7 @@ public class Employee {
 
     public Employee() {}
 
-    public Employee(String fullName,  Date birthday, String login, String password, String email, String status) {
+    public Employee(String fullName,  String birthday, String login, String password, String email, String status) {
         this.fullName = fullName;
         this.birthday = birthday;
         this.login = login;
@@ -40,11 +34,11 @@ public class Employee {
         this.fullName = fullName;
     }
 
-    public Date getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(Date birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 
